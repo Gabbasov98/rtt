@@ -1,0 +1,20 @@
+@import "../vars.scss";
+.grey-text {
+    color: rgba($black, .5);
+}
+
+.blue-text {
+    color: $primary;
+}
+
+.display2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.display3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+}

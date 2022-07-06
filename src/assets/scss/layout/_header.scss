@@ -1,0 +1,38 @@
+@import "../vars.scss";
+.header {
+    background: #FFFFFF;
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 27.5px 0;
+        min-height: 93px;
+    }
+    &__admin {
+        margin-left: auto;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+    }
+    &__buttons {
+        margin-left: auto;
+    }
+    &__btn {
+        width: 170px;
+        height: 48px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    font-size: 18px;
+    line-height: 120%;
+    &__link {
+        margin-right: 36px;
+        font-weight: 600;
+        &.router-link-active {
+            color: $primary;
+        }
+    }
+}

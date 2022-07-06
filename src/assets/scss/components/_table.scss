@@ -1,0 +1,36 @@
+@import '../vars.scss';
+.table-block {
+    border: 1px solid #CFCFCF;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th,
+    td {
+        text-align: center;
+        font-size: 16px;
+        line-height: 120%;
+        height: 60px;
+        font-weight: 600;
+        &:not(:last-child) {
+            border-right: 1px solid #CFCFCF;
+        }
+    }
+    th {
+        background: #F3F3F3;
+        color: rgba($black, .5);
+    }
+    td {
+        border-top: 1px solid #CFCFCF;
+    }
+}
+
+.clickable-table {
+    tbody tr:hover {
+        cursor: pointer;
+        background-color: rgba($primary, .1);
+    }
+}

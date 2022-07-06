@@ -1,0 +1,184 @@
+@import "../vars.scss";
+.admin {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    .container {
+        min-height: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    &__inner {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__sidebar {
+        width: 405px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    &__content {
+        width: calc(100% - 440px);
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+    }
+    &__sort {
+        display: flex;
+        align-items: center;
+        &-btn {
+            height: 40px;
+            margin-left: 10px;
+        }
+        &-date {
+            width: 264px;
+            input {
+                width: 100%;
+                height: 40px;
+                background-color: #FFFFFF;
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M18 9L12 15L6 9' stroke='%23302F2F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 16px center;
+                border-radius: 8px;
+                border: 1px solid #fff;
+                padding: 0 40px 0 16px;
+                font-size: 16px;
+                line-height: 130%;
+                &.active {
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+    &__info,
+    &__card {
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__info {
+        &-sum {
+            height: 28px;
+            padding: 0 6px;
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            border-radius: 10px;
+        }
+    }
+    &__card {
+        margin-top: 20px;
+        &-select {
+            min-width: 195px;
+        }
+    }
+    &__table {
+        margin-top: 20px;
+    }
+    &__tabs {
+        display: flex;
+        align-items: center;
+        margin-top: 14px;
+    }
+    &__tab {
+        padding: 6px 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: rgba($black, .5);
+        margin-right: 14px;
+        position: relative;
+        transition: all .225s;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 3px;
+            border-radius: 2px 2px 0px 0px;
+            background-color: $primary;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+        &:hover,
+        &--active {
+            color: $black;
+            cursor: pointer;
+            &::before {
+                opacity: 1;
+            }
+        }
+        &--active {
+            pointer-events: none;
+        }
+    }
+}
+
+.admin-sidebar {
+    padding: 30px 20px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    &--full {
+        flex-grow: 1;
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        &-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
+        &-desc {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 120%;
+        }
+    }
+    &__phone {
+        margin-top: 6px;
+    }
+    &__links {
+        margin-top: 45px;
+    }
+    &__logout,
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 14px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        svg {
+            margin-right: 10px;
+        }
+        &.router-link-exact-active,
+        &:hover {
+            cursor: pointer;
+            color: $black;
+            background-color: $lightGray;
+        }
+    }
+    &__logout {
+        margin: auto 0 0;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

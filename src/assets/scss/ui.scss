@@ -1,0 +1,25 @@
+@import "vars";
+.breadcrumbs {
+    margin-bottom: 20px;
+    &__item {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: rgba($black, .5);
+        &:hover {
+            color: $black;
+        }
+        &:not(:first-child) {
+            &::before {
+                content: '/';
+                margin: 0 3px;
+                color: rgba($black, .5);
+            }
+        }
+        &:last-child {
+            color: $black;
+            pointer-events: none;
+        }
+    }
+}

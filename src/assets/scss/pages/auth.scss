@@ -1,0 +1,52 @@
+.auth {
+    &__title {
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 12px;
+        }
+    }
+    &__form {
+        margin-top: 32px;
+    }
+    &__forgot {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        margin-top: -2px;
+        display: block;
+        &:hover {
+            color: #262732;
+        }
+    }
+    &__btn {
+        height: 48px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__desc {
+        margin-top: 8px;
+        max-width: 240px;
+    }
+    &__reg {
+        margin: 16px auto 0;
+    }
+    &__code {
+        &-change,
+        &-hint {
+            font-size: 14px;
+            line-height: 130%;
+            strong {
+                font-weight: 700;
+            }
+        }
+        &-hint {
+            &--mt16 {
+                margin-top: 16px;
+            }
+        }
+        &-change {
+            margin-top: 6px;
+        }
+    }
+}

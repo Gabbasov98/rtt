@@ -1,0 +1,38 @@
+@import "../vars.scss";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.btn-gray,
+.btn-blue {
+    padding: 0 34.5px;
+    background-color: $primary;
+    color: #fff;
+    &:hover {
+        background-color: darken($primary, 10%);
+        color: #fff;
+    }
+}
+
+.btn-gray {
+    background-color: $lightGray;
+    color: $black;
+    &:hover {
+        background-color: darken($lightGray, 10%);
+        color: $black;
+    }
+}
+
+.text-btn {
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 400;
+    &:hover {
+        color: $primary;
+    }
+}

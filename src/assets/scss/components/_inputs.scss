@@ -1,0 +1,78 @@
+@import "../vars.scss";
+.mfg {
+    margin-bottom: 12px;
+    position: relative;
+    label {
+        font-size: 12px;
+        line-height: 130%;
+        display: block;
+        margin-bottom: 4px;
+    }
+    input {
+        width: 100%;
+        height: 50px;
+        background-color: $lightGray;
+        border: none;
+        border-radius: 8px;
+        padding: 0 16px;
+        font-size: 16px;
+        &::placeholder {
+            color: rgba($black, .5);
+        }
+    }
+    &__currency {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        line-height: 130%;
+    }
+}
+
+.check {
+    position: relative;
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+label {
+            &::before {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6666 5L7.49998 14.1667L3.33331 10' stroke='%230077FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        &:disabled+label {
+            color: #AAAAAA;
+            pointer-events: none;
+        }
+    }
+    label {
+        padding-left: 32px;
+        position: relative;
+        min-height: 20px;
+        font-size: 14px;
+        line-height: 130%;
+        cursor: pointer;
+        display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            border-radius: 3px;
+            background: $lightGray;
+            border: 1px solid $lightGray;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 0;
+            transition: all .100s;
+        }
+    }
+}
